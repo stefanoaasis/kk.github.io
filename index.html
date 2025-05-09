@@ -7,19 +7,27 @@
   <title>KvarnerKodek</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom subtle animation */
+    @tailwind base;
+    @tailwind components;
+    @tailwind utilities;
+
+    /* Custom fade-in-up animation */
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(10px); }
+      from { opacity: 0; transform: translateY(8px); }
       to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease-out;
     }
   </style>
 </head>
 
-<body class="bg-black text-white antialiased min-h-screen flex items-center justify-center">
-  <div class="text-center space-y-6 animate-[fadeInUp_1s_ease-out]">
-    <img src="kvarnerkodek.png" alt="KvarnerKodek Logo" class="mx-auto w-36 h-auto" />
-    <h1 class="text-4xl font-light tracking-widest uppercase">KvarnerKodek</h1>
-    <p class="text-sm italic opacity-70">Silently compressing the unknown.</p>
+<body class="bg-white text-black antialiased min-h-screen flex items-center justify-center px-4">
+  <div class="text-center space-y-4 animate-fadeInUp">
+    <img src="kvarnerkodek.png" alt="KvarnerKodek Logo" class="mx-auto w-40 h-auto" />
+    <h1 class="text-5xl font-thin uppercase tracking-wide">KvarnerKodek</h1>
+    <div class="w-24 h-px bg-gray-300 mx-auto"></div>
+    <p class="text-base italic text-gray-600">Silence Shapes Signal.</p>
   </div>
 </body>
 
